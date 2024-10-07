@@ -17,6 +17,7 @@ import NetworkStatus from './components/NetworkStatus';
 import DeviceOrientation from './components/DeviceOrientation';
 import FeedbackButton from './components/FeedbackButton';
 import NetworkType from './components/NetworkType';
+import DeviceInfo from './components/DeviceInfo';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <VoiceCommands />
           <ScreenComparison />
           <NetworkType />
+          <DeviceInfo />
           <FeedbackButton />
           <LastUpdated />
         </main>
