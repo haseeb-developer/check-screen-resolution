@@ -1,4 +1,3 @@
-// src/components/ScreenDetails.js
 import React from 'react';
 import { useScreenResolution } from '../utils/useScreenResolution';
 import { isMobile, isTablet } from 'react-device-detect';

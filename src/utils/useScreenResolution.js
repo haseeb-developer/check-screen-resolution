@@ -1,4 +1,3 @@
-// src/utils/useScreenResolution.js
 import { useState, useEffect } from 'react';
 
 export const useScreenResolution = () => {
@@ -17,7 +16,6 @@ export const useScreenResolution = () => {
 
     window.addEventListener('resize', handleResize);
 
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };

@@ -1,4 +1,3 @@
-// src/components/ResolutionDisplay.js
 import React from 'react';
 import { useScreenResolution } from '../utils/useScreenResolution';
 

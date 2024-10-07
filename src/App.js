@@ -1,6 +1,7 @@
 import './styles/app.css';
 import ResolutionDisplay from './components/ResolutionDisplay';
 import ScreenDetails from './components/ScreenDetails';
+import LastUpdated from './components/LastUpdated';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <main>
           <ResolutionDisplay />
           <ScreenDetails />
+          <LastUpdated />
         </main>
       </div>
     </>
