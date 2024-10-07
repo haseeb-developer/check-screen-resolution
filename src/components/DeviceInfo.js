@@ -8,10 +8,15 @@ const DeviceInfo = () => {
     os: 'Loading...',
     screenResolution: 'Loading...',
     deviceType: 'Loading...',
+    batteryLevel: 'Loading...',
+    batteryCharging: 'Loading...',
+    timezone: 'Loading...',
+    language: 'Loading...',
+    connectionType: 'Loading...',
   });
 
   useEffect(() => {
-    const getDeviceInfo = () => {
+    const getDeviceInfo = async () => {
       // Browser Name and Version
       const userAgent = navigator.userAgent;
       let browserName, browserVersion;
@@ -50,12 +55,37 @@ const DeviceInfo = () => {
       // Device Type
       const deviceType = /Mobi|Android/i.test(userAgent) ? 'Mobile' : 'Desktop';
 
+      // Battery Status
+      let batteryLevel = 'N/A';
+      let batteryCharging = 'N/A';
+      if (navigator.getBattery) {
+        const battery = await navigator.getBattery();
+        batteryLevel = `${(battery.level * 100).toFixed(0)}%`;
+        batteryCharging = battery.charging ? 'Yes' : 'No';
+      }
+
+      // Timezone
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+      // Language
+      const language = navigator.language || navigator.userLanguage;
+
+      // Connection Type
+      const connectionType = navigator.connection
+        ? navigator.connection.effectiveType
+        : 'Unknown';
+
       setDeviceInfo({
         deviceName: `${navigator.platform} (${deviceType})`,
         browser: `${browserName} ${browserVersion}`,
         os,
         screenResolution,
         deviceType,
+        batteryLevel,
+        batteryCharging,
+        timezone,
+        language,
+        connectionType,
       });
     };
 
@@ -78,10 +108,13 @@ const DeviceInfo = () => {
         <strong>Operating System:</strong> {deviceInfo.os}
       </p>
       <p>
-        <strong>Screen Resolution:</strong> {deviceInfo.screenResolution}
+        <strong>Device Type:</strong> {deviceInfo.deviceType}
       </p>
       <p>
-        <strong>Device Type:</strong> {deviceInfo.deviceType}
+        <strong>Timezone:</strong> {deviceInfo.timezone}
+      </p>
+      <p>
+        <strong>Language:</strong> {deviceInfo.language}
       </p>
     </div>
   );

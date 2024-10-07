@@ -61,6 +61,7 @@ p {
 .live-location,
 .feedback,
 .clipboard-status,
+.device-info,
 .screen-details {
   margin: 30px auto;
   padding: 30px;
@@ -87,6 +88,7 @@ p {
 .network-status:hover,
 .live-location:hover,
 .feedback:hover,
+.device-info:hover,
 .clipboard-status:hover,
 .screen-details:hover {
   transform: translateY(-10px);
@@ -183,6 +185,7 @@ form input[type='submit']:hover {
   .network-status,
   .network-type,
   .live-location,
+  .device-info,
   .feedback,
   .clipboard-status,
   .screen-details {
