@@ -16,6 +16,7 @@ import BatteryStatus from './components/BatteryStatus';
 import NetworkStatus from './components/NetworkStatus';
 import DeviceOrientation from './components/DeviceOrientation';
 import FeedbackButton from './components/FeedbackButton';
+import NetworkType from './components/NetworkType';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <ParallaxEffect />
           <VoiceCommands />
           <ScreenComparison />
+          <NetworkType />
           <FeedbackButton />
           <LastUpdated />
         </main>
