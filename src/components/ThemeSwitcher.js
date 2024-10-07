@@ -14,7 +14,9 @@ const ThemeSwitcher = () => {
 
   return (
     <div className="theme-switcher">
-      <button onClick={switchTheme}>Switch Theme</button>
+      <button onClick={switchTheme} className="themeswitcher">
+        Switch Theme
+      </button>
     </div>
   );
 };

@@ -6,6 +6,8 @@ import DeviceMotion from './components/DeviceMotion';
 import ParallaxEffect from './components/ParallaxEffect';
 import VoiceCommands from './components/VoiceCommands';
 import ThemeSwitcher from './components/ThemeSwitcher';
+import ColorDepth from './components/ColorDepth';
+import ViewportSize from './components/ViewportSize';
 
 function App() {
   return (
@@ -15,13 +17,15 @@ function App() {
           <h1>Screen Resolution Checker</h1>
         </header>
         <main>
+          <ThemeSwitcher />
           <ResolutionDisplay />
           <ScreenDetails />
           <LastUpdated />
           <DeviceMotion />
           <ParallaxEffect />
           <VoiceCommands />
-          <ThemeSwitcher />
+          <ColorDepth />
+          <ViewportSize />
         </main>
       </div>
     </>

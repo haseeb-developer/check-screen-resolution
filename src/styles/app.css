@@ -30,6 +30,8 @@ main {
 .resolution-display,
 .last-updated,
 .voice-commands,
+.color-depth,
+.viewport-size,
 .theme-switcher,
 .device-motion,
 .screen-details {
@@ -59,4 +61,19 @@ p {
   border-top: 1px solid #ddd;
   font-size: 18px;
   color: #666;
+}
+
+.themeswitcher {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: burlywood;
+  color: #282c34;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.themeswitcher:hover {
+  background-color: #4caf50;
+  color: white;
 }
