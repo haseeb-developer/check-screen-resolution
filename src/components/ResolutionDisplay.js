@@ -8,7 +8,7 @@ const ResolutionDisplay = () => {
     <div className="resolution-display">
       <h2>Your Screen Resolution</h2>
       <p>
-        Width: {width}px, Height: {height}px
+        {width} &nbsp; x &nbsp;{height}
       </p>
     </div>
   );

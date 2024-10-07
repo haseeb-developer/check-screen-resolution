@@ -1,0 +1,22 @@
+/* src/styles/ThemeSwitcher.css */
+
+[data-theme='light'] {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1a1919;
+  --text-color: white;
+}
+
+[data-theme='gradient'] {
+  --bg-color: linear-gradient(45deg, #ff6b6b, #f06595);
+  --text-color: white;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
