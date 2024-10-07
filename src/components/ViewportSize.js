@@ -24,9 +24,11 @@ const ViewportSize = () => {
 
   return (
     <div className="viewport-size">
-      <h2>Browser Viewport Size</h2>
-      <p>Width: {viewport.width}px</p>
-      <p>Height: {viewport.height}px</p>
+      <h2>Browser Viewport Size:</h2>
+
+      <p>
+        {viewport.width} &nbsp; x &nbsp;{viewport.height}
+      </p>
     </div>
   );
 };

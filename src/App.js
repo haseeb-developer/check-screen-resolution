@@ -8,6 +8,7 @@ import VoiceCommands from './components/VoiceCommands';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import ColorDepth from './components/ColorDepth';
 import ViewportSize from './components/ViewportSize';
+import ScreenComparison from './components/ScreenComparison';
 
 function App() {
   return (
@@ -19,13 +20,14 @@ function App() {
         <main>
           <ThemeSwitcher />
           <ResolutionDisplay />
+          <ViewportSize />
           <ScreenDetails />
+          <ColorDepth />
           <LastUpdated />
           <DeviceMotion />
           <ParallaxEffect />
           <VoiceCommands />
-          <ColorDepth />
-          <ViewportSize />
+          <ScreenComparison />
         </main>
       </div>
     </>
