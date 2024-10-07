@@ -28,13 +28,14 @@ main {
 }
 
 .resolution-display,
-.last-updated,
 .voice-commands,
 .color-depth,
 .viewport-size,
 .screen-comparison,
+.fps-meter,
 .theme-switcher,
 .device-motion,
+.live-wifi-ping,
 .screen-details {
   margin: 20px auto;
   background-color: #282c34;
@@ -44,6 +45,12 @@ main {
   color: #fff;
   width: 80%;
   max-width: 600px;
+}
+
+.last-updated {
+  border: transparent;
+  outline: none;
+  text-align: center;
 }
 
 h2 {
@@ -64,17 +71,19 @@ p {
   color: #666;
 }
 
-.themeswitcher {
+button {
   padding: 10px 20px;
   cursor: pointer;
   background-color: burlywood;
   color: #282c34;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-radius: 5px;
   font-weight: bold;
   transition: 0.2s ease-in-out;
 }
 
-.themeswitcher:hover {
+button:hover {
   background-color: #4caf50;
   color: white;
 }

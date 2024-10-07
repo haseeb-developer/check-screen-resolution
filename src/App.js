@@ -9,6 +9,8 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import ColorDepth from './components/ColorDepth';
 import ViewportSize from './components/ViewportSize';
 import ScreenComparison from './components/ScreenComparison';
+import FpsMeter from './components/FpsMeter';
+import LiveWifiPing from './components/LiveWifiPing';
 
 function App() {
   return (
@@ -20,14 +22,16 @@ function App() {
         <main>
           <ThemeSwitcher />
           <ResolutionDisplay />
+          <LiveWifiPing />
+          <FpsMeter />
           <ViewportSize />
           <ScreenDetails />
           <ColorDepth />
-          <LastUpdated />
           <DeviceMotion />
           <ParallaxEffect />
           <VoiceCommands />
           <ScreenComparison />
+          <LastUpdated />
         </main>
       </div>
     </>
