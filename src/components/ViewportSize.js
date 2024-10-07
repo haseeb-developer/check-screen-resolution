@@ -1,4 +1,3 @@
-// src/components/ViewportSize.js
 import React, { useState, useEffect } from 'react';
 
 const ViewportSize = () => {

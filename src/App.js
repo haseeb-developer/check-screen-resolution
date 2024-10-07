@@ -11,19 +11,28 @@ import ViewportSize from './components/ViewportSize';
 import ScreenComparison from './components/ScreenComparison';
 import FpsMeter from './components/FpsMeter';
 import LiveWifiPing from './components/LiveWifiPing';
+import LiveLocation from './components/LiveLocation';
+import BatteryStatus from './components/BatteryStatus';
+import NetworkStatus from './components/NetworkStatus';
+import DeviceOrientation from './components/DeviceOrientation';
+import FeedbackButton from './components/FeedbackButton';
 
 function App() {
   return (
     <>
       <div className="content">
         <header className="App-header">
-          <h1>Screen Resolution Checker</h1>
+          <h1>Your Device Details</h1>
         </header>
         <main>
           <ThemeSwitcher />
           <ResolutionDisplay />
           <LiveWifiPing />
           <FpsMeter />
+          <BatteryStatus />
+          <NetworkStatus />
+          <DeviceOrientation />
+          <LiveLocation />
           <ViewportSize />
           <ScreenDetails />
           <ColorDepth />
@@ -31,6 +40,7 @@ function App() {
           <ParallaxEffect />
           <VoiceCommands />
           <ScreenComparison />
+          <FeedbackButton />
           <LastUpdated />
         </main>
       </div>

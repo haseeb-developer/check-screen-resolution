@@ -1,4 +1,3 @@
-// src/components/LiveWifiPing.js
 import React, { useState, useEffect } from 'react';
 
 const LiveWifiPing = () => {
@@ -28,7 +27,7 @@ const LiveWifiPing = () => {
     const checkOnlineStatus = () => {
       setIsOnline(navigator.onLine);
       if (navigator.onLine) {
-        setErrorMessage(''); // Clear error message if back online
+        setErrorMessage('');
       } else {
         setPing(null);
         setErrorMessage(

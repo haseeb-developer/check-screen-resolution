@@ -1,22 +1,103 @@
-/* src/styles/ThemeSwitcher.css */
+/* Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General settings */
+:root {
+  --transition-time: 0.5s;
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Dark mode colors */
+  --bg-color: #1d1f27;
+  --text-color: #ffffff;
+  --button-bg-color: #282c34;
+  --button-hover-color: #61dafb;
+  --accent-color: #ff9800;
+}
 
 [data-theme='light'] {
-  --bg-color: white;
-  --text-color: black;
+  /* Light mode colors */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --button-bg-color: #e0e0e0;
+  --button-hover-color: #ff5722;
+  --accent-color: #007bff;
 }
 
-[data-theme='dark'] {
-  --bg-color: #1a1919;
-  --text-color: white;
-}
-
-[data-theme='gradient'] {
-  --bg-color: linear-gradient(45deg, #ff6b6b, #f06595);
-  --text-color: white;
-}
-
+/* Transition for smooth color changes */
 body {
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color var(--transition-time) var(--easing),
+    color var(--transition-time) var(--easing);
+}
+
+/* Theme Switcher Container */
+.theme-switcher-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Theme Switcher Button */
+.theme-switcher-button {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  border-radius: 50px;
+  border: 2px solid var(--accent-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color var(--transition-time) var(--easing),
+    border-color var(--transition-time) var(--easing),
+    transform var(--transition-time) var(--easing);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.theme-switcher-button:hover {
+  background-color: var(--button-hover-color);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.theme-switcher-button svg {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  transition: transform var(--transition-time) var(--easing);
+}
+
+.theme-switcher-button:hover svg {
+  transform: rotate(360deg); /* Add a cool rotation to the icon */
+}
+
+.theme-label {
+  font-size: 1rem;
+}
+
+/* Button and UI transitions for smooth color changes */
+button,
+input[type='submit'] {
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color var(--transition-time) var(--easing),
+    color var(--transition-time) var(--easing);
+}
+
+button:hover,
+input[type='submit']:hover {
+  background-color: var(--button-hover-color);
+  color: var(--text-color);
 }

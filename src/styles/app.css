@@ -11,20 +11,38 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
 
 .App {
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
+h1,
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
-main {
-  padding: 20px;
+p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
 }
 
 .resolution-display,
@@ -36,54 +54,135 @@ main {
 .theme-switcher,
 .device-motion,
 .live-wifi-ping,
+.battery-status,
+.device-orientation,
+.network-status,
+.live-location,
+.feedback,
+.clipboard-status,
 .screen-details {
-  margin: 20px auto;
-  background-color: #282c34;
-  border: 1px solid #282c34;
-  border-radius: 10px;
-  padding: 20px;
-  color: #fff;
-  width: 80%;
-  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  width: 100%;
+  max-width: 700px;
 }
 
-.last-updated {
-  border: transparent;
-  outline: none;
-  text-align: center;
-}
-
-h2 {
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-p {
-  font-size: 18px;
-  color: red;
-}
-
-.last-updated {
-  margin-top: 20px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  font-size: 18px;
-  color: #666;
+.resolution-display:hover,
+.voice-commands:hover,
+.color-depth:hover,
+.viewport-size:hover,
+.screen-comparison:hover,
+.fps-meter:hover,
+.theme-switcher:hover,
+.device-motion:hover,
+.live-wifi-ping:hover,
+.battery-status:hover,
+.device-orientation:hover,
+.network-status:hover,
+.live-location:hover,
+.feedback:hover,
+.clipboard-status:hover,
+.screen-details:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 button {
-  padding: 10px 20px;
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: #fff;
   cursor: pointer;
-  background-color: burlywood;
-  color: #282c34;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.2s ease-in-out;
+  border: none;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  background-color: #4caf50;
-  color: white;
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 106, 0, 0.6);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 20px;
+}
+
+form input[type='text'],
+form input[type='email'],
+form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(179, 99, 99, 0.3);
+  color: #fff;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+form input[type='text']:focus,
+form input[type='email']:focus,
+form textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ff6a00;
+}
+
+form input[type='submit'] {
+  width: auto;
+  padding: 15px 40px;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+form input[type='submit']:hover {
+  background-color: #1769aa;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(33, 150, 243, 0.5);
+}
+
+.last-updated {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #ccc;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
+  }
+
+  .resolution-display,
+  .voice-commands,
+  .color-depth,
+  .viewport-size,
+  .screen-comparison,
+  .fps-meter,
+  .theme-switcher,
+  .device-motion,
+  .live-wifi-ping,
+  .battery-status,
+  .device-orientation,
+  .network-status,
+  .live-location,
+  .feedback,
+  .clipboard-status,
+  .screen-details {
+    width: 90%;
+  }
 }
