@@ -186,3 +186,36 @@ form input[type='submit']:hover {
     width: 90%;
   }
 }
+
+/* Add to your CSS file */
+.wifi-speed-test {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #282c34;
+  color: #fff;
+  text-align: center;
+}
+
+.wifi-speed-test h2 {
+  margin-bottom: 15px;
+}
+
+.wifi-speed-test p {
+  font-size: 18px;
+  color: #61dafb; /* light color for better visibility */
+}
+
+.wifi-speed-test button {
+  padding: 10px 20px;
+  background-color: #ff9800; /* bright button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.wifi-speed-test button:hover {
+  background-color: #ff5722; /* darker button color on hover */
+}
