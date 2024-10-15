@@ -13,6 +13,8 @@ const DeviceInfo = () => {
     timezone: 'Loading...',
     language: 'Loading...',
     connectionType: 'Loading...',
+    uptime: 'Loading...',
+    publicIP: 'Loading...',
   });
 
   useEffect(() => {
@@ -64,13 +66,10 @@ const DeviceInfo = () => {
         batteryCharging = battery.charging ? 'Yes' : 'No';
       }
 
-      // Timezone
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-      // Language
       const language = navigator.language || navigator.userLanguage;
 
-      // Connection Type
       const connectionType = navigator.connection
         ? navigator.connection.effectiveType
         : 'Unknown';
@@ -90,7 +89,7 @@ const DeviceInfo = () => {
     };
 
     getDeviceInfo();
-    const intervalId = setInterval(getDeviceInfo, 10000); // Refresh every 10 seconds
+    const intervalId = setInterval(getDeviceInfo, 10000);
 
     return () => clearInterval(intervalId);
   }, []);
