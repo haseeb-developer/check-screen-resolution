@@ -13,6 +13,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: url(../assets/bg.jpg);
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
