@@ -45,8 +45,8 @@ function App() {
           <NetworkType />
           <DeviceInfo />
           <FeedbackButton />
-          <LastUpdated />
         </main>
+        <LastUpdated />
       </div>
     </>
   );
