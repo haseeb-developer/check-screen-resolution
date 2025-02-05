@@ -1,7 +1,7 @@
 import './styles/app.css';
 import ResolutionDisplay from './components/ResolutionDisplay';
 import ScreenDetails from './components/ScreenDetails';
-import LastUpdated from './components/LastUpdated';
+// import LastUpdated from './components/LastUpdated';
 import DeviceMotion from './components/DeviceMotion';
 import ParallaxEffect from './components/ParallaxEffect';
 import VoiceCommands from './components/VoiceCommands';
@@ -18,6 +18,7 @@ import DeviceOrientation from './components/DeviceOrientation';
 import FeedbackButton from './components/FeedbackButton';
 import NetworkType from './components/NetworkType';
 import DeviceInfo from './components/DeviceInfo';
+import CountryStatus from './components/CountryStatus'
 
 function App() {
   return (
@@ -29,13 +30,13 @@ function App() {
         <main>
           <ThemeSwitcher />
           <ResolutionDisplay />
+          <ViewportSize />
           <LiveWifiPing />
           <FpsMeter />
           <BatteryStatus />
           <NetworkStatus />
           <DeviceOrientation />
           <LiveLocation />
-          <ViewportSize />
           <ScreenDetails />
           <ColorDepth />
           <DeviceMotion />
@@ -44,9 +45,10 @@ function App() {
           <ScreenComparison />
           <NetworkType />
           <DeviceInfo />
+          <CountryStatus />
           <FeedbackButton />
         </main>
-        <LastUpdated />
+        {/* <LastUpdated /> */}
       </div>
     </>
   );

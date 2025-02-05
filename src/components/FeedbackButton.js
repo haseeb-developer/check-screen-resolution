@@ -9,10 +9,10 @@ const FeedbackButton = () => {
 
     emailjs
       .sendForm(
-        'service_4dem1pk',
-        'template_w9kpy34',
+        'service_zatmfyr',
+        'template_mtgpr97',
         form.current,
-        'HDHCktKual_NzJWW0'
+        'user_DzZzfNGW3ZUKjk1E2x9Kg'
       )
       .then(
         (result) => {

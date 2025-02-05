@@ -74,6 +74,7 @@ p {
 .theme-switcher-container,
 .clipboard-status,
 .device-info,
+.detect-place,
 .screen-details {
   padding: 30px;
   border-radius: 15px;
@@ -107,6 +108,7 @@ p {
 .live-location:hover,
 .feedback:hover,
 .device-info:hover,
+.detect-place:hover,
 .clipboard-status:hover,
 .screen-details:hover {
   transform: translateY(-5px);
